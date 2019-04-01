@@ -1,12 +1,12 @@
 import Link from 'next/link';
+import Layout from '../component/Layout';
 
 export default () => (
-  <div>
-    <h1>About</h1>
+  <Layout title="About">
     <Link href="/">
       <a >Go to home</a>
     </Link>
     <p>AJavascript programmer</p>
     <img src="/static/JavaScript-logo.png" alt="Javascript" height="200px"/>
-  </div>
-)
+  </Layout>
+);
