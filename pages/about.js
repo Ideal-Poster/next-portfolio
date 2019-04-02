@@ -9,7 +9,7 @@ import Error from '../pages/_error';
 export default class About extends Component {
 
   static async getInitialProps() {
-    const res =  await fetch("https://api.github.com/users/reewefwdbarger");
+    const res =  await fetch("https://api.github.com/users/reedbarger");
     const statusCode =  res.status > 200 ? res.status : false;
     const data = await res.json();
     // .then(res => res.json())
@@ -31,8 +31,8 @@ export default class About extends Component {
 
   render() {
     const { user, statusCode }=  this.props;
-
     if (statusCode) return  <Error statusCode={ statusCode}/>
+
     return(
       <Layout title="About">
         <p>{user.name}</p>
